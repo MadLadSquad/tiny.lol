@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 rm *.html
 rm -rf Translations/ Components/ UBTCustomFunctions/ UVKBuildTool/ .github/
 mv build/* .
