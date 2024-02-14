@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{{ include Components/head.tmpl.html }}
+		<title class="site-title">{{ trademark }} </title>
+	</head>
+	<body data-gramm="false" data-gramm_editor="false" data-enable-grammarly="false" spellcheck="false">
+		{{ include Components/header.tmpl.html }}
+		<main id="main-page" data-gramm="false" data-gramm_editor="false" data-enable-grammarly="false" spellcheck="false">
+			<h1>Easily generate 2D image codes from any text string</h1>
+			<section>
+				<label>
+					Text:
+					<input id="code-text-box" type="text" name="type"/>
+				</label>
+			</section>
+			<section class="code-grid">
+				<section>
+					<h3>QR Code</h3>
+					<img id="img-0"/>
+				</section>
+				<section>
+					<h3>Barcode 128</h3>
+					<img id="img-1"/>
+				</section>
+				<section>
+					<h3>Barcode 16K</h3>
+					<img id="img-2"/>
+				</section>
+				<section>
+					<h3>Barcode 49</h3>
+					<img id="img-3"/>
+				</section>
+				<section>
+					<h3>Aztec code</h3>
+					<img id="img-4"/>
+				</section>
+				<section>
+					<h3>Compact aztec</h3>
+					<img id="img-5"/>
+				</section>
+				<section>
+					<h3>Code One</h3>
+					<img id="img-6"/>
+				</section>
+				<section>
+					<h3>Datamatrix</h3>
+					<img id="img-7"/>
+				</section>
+				<section>
+					<h3>Datamatrix rectangular</h3>
+					<img id="img-8"/>
+				</section>
+				<section>
+					<h3>Datamatrix rectangular extended</h3>
+					<img id="img-9"/>
+				</section>
+				<section>
+					<h3>Dotcode</h3>
+					<img id="img-10"/>
+				</section>
+			</section>
+		</main>
+		<hr id="main-page-hr">
+		{{ include Components/footer.tmpl.html }}
+	</body>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bwip-js@latest/dist/bwip-js-min.min.js"></script>
+	<script src="./code.js"></script>
+</html>

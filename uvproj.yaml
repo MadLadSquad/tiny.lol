@@ -1,6 +1,6 @@
 localhost-commands:
-  - "find ./ -type f \\( -iname \\*.html -o -iname \\*.js \\) -exec sed -i 's/\\.\\//http:\\/\\/0.0.0.0:8080\\//g' {} \\;"
-  - "find ./ -type f \\( -iname \\*.html -o -iname \\*.js \\) -exec sed -i 's/https:\\/\\/tiny.lol\\//http:\\/\\/0.0.0.0:8080\\//g' {} \\;"
+  - "find ./ -type f \\( -iname \\*.html -o -iname \\*.js \\) -exec sed -i 's/\\.\\//http:\\/\\/0.0.0.0:7070\\//g' {} \\;"
+  - "find ./ -type f \\( -iname \\*.html -o -iname \\*.js \\) -exec sed -i 's/https:\\/\\/tiny.lol\\//http:\\/\\/0.0.0.0:7070\\//g' {} \\;"
   - "python3 -m http.server 7070"
 filename-blacklist:
   - git
