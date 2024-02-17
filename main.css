@@ -36,15 +36,8 @@ main {
 	box-sizing: border-box;
 
 	color: var(--main-text-colour);
-	
-	max-width: 1440px;
-	margin-left: max(auto, 2rem);
-	margin-right: max(auto, 2rem);
-	border-radius: 0.25rem;
-}
-
-main * {
-	opacity: 100%;
+	width: 100%;
+	height: 100%;
 }
 
 a {
