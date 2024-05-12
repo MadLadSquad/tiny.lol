@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: master
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -27,7 +27,7 @@ jobs:
           submodules: true
           clean: false
           fetch-depth: 0
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         with:
           path: vendor/bundle
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
@@ -54,14 +54,14 @@ jobs:
           find ./ -type f \( -iname \*.html -o -iname \*.js \) -exec sed -i 's/\.html//g' {} \;
           find ./ -type f \( -iname \*.html -o -iname \*.js \) -exec sed -i 's/\.\//https:\/\/tiny.lol\//g' {} \;
       - name: Setup Pages
-        uses: actions/configure-pages@v2
+        uses: actions/configure-pages@v5
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
           destination: ./_site
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
 
   deploy:
     environment:
@@ -72,5 +72,5 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
 
