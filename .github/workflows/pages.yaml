@@ -39,6 +39,7 @@ jobs:
           git submodule sync --recursive
           git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
       - run: "echo 'run-localhost-automatically: false' >> uvproj.yaml"
+      - run: sudo apt install libyaml-cpp-dev
       - name: Build project
         run: cd UVKBuildTool/ && ./setup-web.sh .. && cd build && cd ../../ && ./run.sh
       - run: ./ci-clean.sh
